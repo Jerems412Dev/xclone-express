@@ -124,7 +124,7 @@ const resolvers = {
             if (!isMatch) {
                 throw new Error('Incorrect password');
             }
-            const token = jwt.sign({ userId: user.idUser }, '59d407208c0bfb4fc52780506cdecd71cbde23b4dd622bc80d84b66e9efc4dd2', { expiresIn: '1h' });
+            const token = jwt.sign({ userId: user.idUser }, 'your_key', { expiresIn: '1h' });
             return token;
         }
     }
